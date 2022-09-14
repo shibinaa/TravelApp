@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body style="background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg');">
+<!--<div class="background-image"></div>-->
+<h1>Register Here</h1>
+<form action="register" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter your username"> <br>
+    <input type="text" name="first_name" placeholder="Enter your first name"> <br>
+    <input type="text" name="last_name" placeholder="Enter your last name"> <br>
+    <input type="email" name="email" placeholder="Enter your email"> <br>
+    <input type="password" name="password" placeholder="Enter your password"> <br>
+    <input type="password" name="password1" placeholder="Confirm password"> <br>
+    <input type="submit">
+</form>
+
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor %}
+
+</body>
+<!--<style>-->
+<!--    .background-image{-->
+<!--        background-image: url('media/bgimgs/abc.jpg');-->
+
+<!--        }-->
+<!--</style>-->
+</html>
